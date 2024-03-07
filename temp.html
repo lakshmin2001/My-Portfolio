@@ -1,0 +1,229 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+<style>
+
+
+
+*,
+*::before,
+*::after {
+ margin: 0;
+ padding: 0;
+ box-sizing: inherit;
+}
+
+body {
+ font: 100%/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", "Lucida Grande", Calibri, Verdana, sans-serif;
+ box-sizing: border-box;
+}
+
+.mySlides {
+ display:none;
+}
+
+img {
+ max-width: 100%;
+ margin-bottom: -5px;
+}
+
+figure {
+ text-align:center;
+} 
+
+.w3-col {
+ float: left;
+}
+
+.s4 {
+  width: 33.33333%;
+}
+
+.w3-content {
+  max-width: 980px;
+  margin: auto;
+}
+
+
+.w3-container {
+  padding: 0.01em 16px;
+}
+
+.w3-container:after,.w3-panel:after,.w3-row:after,.w3-row-padding:after,.w3-topnav:after,.w3-clear:after,.w3-btn-group:before,.w3-btn-group:after,.w3-btn-bar:before,.w3-btn-bar:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.w3-row-padding {
+  padding: 0 8px;
+}
+
+.w3-row-padding > .w3-col {
+  padding: 0 8px;
+}
+
+.w3-section {
+  margin-top: 16px !important;
+  margin-bottom: 16px !important;
+}
+
+[class*="w3-border-"] {
+ border-style: solid;
+ border-width: 1px; 
+}
+
+.w3-border-red,
+.w3-hover-border-red:hover {
+  border-color: #f44336 !important;
+}
+
+.w3-hover-shadow {
+transition: background-color .3s,color .15s,box-shadow .3s,opacity 0.3s;
+}
+
+.w3-hover-shadow:hover {
+ box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)!important;
+}
+
+header > h2,
+header > p {
+ text-align: center;
+}
+
+p {
+ padding: .5em 0;
+}
+
+header {
+ padding: 1.5em 0;
+}
+
+ pre {
+ font-family: Consolas, Menlo, monospace;
+ font-size: 1em;
+ white-space: pre-wrap;
+}
+</style>
+
+
+
+</head>
+<body>
+    
+
+
+
+
+
+
+
+
+
+
+
+    <header>
+        <h2>Slideshow Indicators</h2>
+        <p>An example of using images to indicate how many slides there are in the slideshow, and which image the user is currently viewing (red border).</p>
+      </header>
+      
+      <div class="w3-content" style="max-width:1200px">
+        <figure class="mySlides" >
+          <img src="//placehold.it/1000x350/33cc4d/ffffff" style="width:100%">
+          <figcaption>
+            <pre>Wide Nature</pre>
+          </figcaption>
+        </figure>
+        <figure class="mySlides">
+          <img src="//placehold.it/1000x350/33cca6/ffffff" style="width:100%">
+          <figcaption>
+            <pre>Fjords</pre>
+          </figcaption>
+        </figure>
+        <figure class="mySlides">
+          <img src="//placehold.it/1000x350/33adcc/ffffff" style="width:100%">
+          <figcaption>
+            <pre>Mountains</pre>
+          </figcaption>
+        </figure>  
+      
+        <div class="w3-row-padding w3-section">
+          <div class="w3-col s4">
+            <img class="demo w3-border w3-hover-shadow" src="//placehold.it/1000x350/33cc4d/ffffff" style="width:100%" onclick="currentDiv(1)">
+          </div>
+          <div class="w3-col s4">
+            <img class="demo w3-border w3-hover-shadow" src="//placehold.it/1000x350/33cca6/ffffff" style="width:100%" onclick="currentDiv(2)">
+          </div>
+          <div class="w3-col s4">
+            <img class="demo w3-border w3-hover-shadow" src="//placehold.it/1000x350/33adcc/ffffff" style="width:100%" onclick="currentDiv(3)">
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+      <script>
+
+
+
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-border-red", "");
+  }
+  x[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " w3-border-red";
+}
+      </script>
+      
+</body>
+</html>

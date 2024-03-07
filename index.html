@@ -1,0 +1,1499 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>My Portfolio</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+
+  <!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="css/flexslider.css">
+	<!-- Flaticons  -->
+	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+<style>
+
+
+
+
+			* {box-sizing: border-box;}
+			.mySlides {display: none;}
+			img {vertical-align: middle;}
+			
+			/* Slideshow container */
+			.slideshow-container {
+			  max-width: 1000px;
+			  position: relative;
+			  margin: auto;
+			}
+			
+			/* Caption text */
+			.text {
+			  color: #f2f2f2;
+			  font-size: 15px;
+			  padding: 8px 12px;
+			  position: absolute;
+			  bottom: 8px;
+			  width: 100%;
+			  text-align: center;
+			}
+			
+			/* Number text (1/3 etc) */
+			.numbertext {
+			  color: #f2f2f2;
+			  font-size: 12px;
+			  padding: 8px 12px;
+			  position: absolute;
+			  top: 0;
+			}
+			
+			/* The dots/bullets/indicators */
+			.dot {
+			  height: 15px;
+			  width: 15px;
+			  margin: 0 2px;
+			  background-color: #bbb;
+			  border-radius: 50%;
+			  display: inline-block;
+			  transition: background-color 0.6s ease;
+			}
+			
+			.dots .active {
+			  background-color: #717171;
+			}
+			
+			/* Fading animation */
+			.fade {
+			  animation-name: fade;
+			  animation-duration: 17s;
+			}
+			
+			@keyframes fade {
+			  from {opacity: .9} 
+			  to {opacity: 1}
+			}
+			
+			/* On smaller screens, decrease text size */
+			@media only screen and (max-width: 300px) {
+			  .text {font-size: 11px}
+			}
+			
+			
+			
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio and crop if necessary */
+}
+
+@media (max-width: 768px) {
+  /* Adjust iframe width for smaller screens */
+  iframe {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Adjust iframe width for very small screens */
+  iframe {
+    width: 80%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* body {
+				 font-family: 'Roboto', sans-serif;
+				  margin: 0;
+				  padding: 0;
+				} */
+			
+				#card-container {
+				  display: flex;
+				  flex-wrap: wrap;
+				}
+			
+				.card {
+				  height: 55vh;
+				  width: calc((100% / 3) - 16px);
+				  margin: 8px;
+				  border-radius: 3px;
+				  transition: all 200ms ease-in-out;
+				  display: flex;
+				  align-items: center;
+				  justify-content: center;
+				  overflow: hidden;
+				}
+			
+				.card img {
+				  max-width: 100%;
+				  max-height: 100%;
+				  object-fit: cover;
+				}
+			
+				.card:hover {
+				  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+				}
+			
+				.card-actions {
+				  margin: 8px;
+				  padding: 16px 0;
+				  display: flex;
+				  justify-content: space-between;
+				  align-items: center;
+				}
+			
+				#load-more {
+				  width: calc((100% / 3) - 8px);
+				  padding: 16px;
+				  background-color: white;
+				  border: none;
+				  cursor: pointer;
+				  transition: all 200ms ease-in-out;
+				  border-radius: 3px;
+				  font-size: 0.75rem;
+				  text-transform: uppercase;
+				  letter-spacing: 0.15rem;
+				}
+			
+				#load-more:not([disabled]):hover {
+				  box-shadow: 0 1px 9px rgba(0, 0, 0, 0.2);
+				}
+			
+				#load-more[disabled] {
+				  background-color: #eaeaea !important;
+				}
+
+
+</style>
+	</head>
+	<body>
+	<div id="colorlib-page">
+		<div class="container-wrap">
+		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+		<aside id="colorlib-aside" role="complementary" class="" style="background-color: black; color: white;">
+			
+			
+			<!-- class=border js-fullheight -->
+			
+			
+			
+			<div class="text-center" >
+				<div class="author-img" style="background-image: url(images/Untitled-17.jpg);"></div>
+				<h1 id="colorlib-logo"><a href="index.html" style="color: rgb(255, 255, 255);">TL Narasimha</a></h1>
+				<span class="position"><a href="#">UI/UX/Designer</a> in Hyderabad</span>
+			</div>
+			<nav id="colorlib-main-menu" role="navigation" class="navbar">
+				<div id="navbar" class="collapse" >
+					<ul>
+						<li class="active" ><a href="#" data-nav-section="home" style="color: rgb(255, 255, 255);">Home</a></li>
+						<li><a href="#" data-nav-section="about" style="color: rgb(255, 255, 255);">About</a></li>
+						<li><a href="#" data-nav-section="services" style="color: rgb(255, 255, 255);">Services</a></li>
+						<li><a href="#" data-nav-section="skills" style="color: rgb(255, 255, 255);">Skills</a></li>
+						<li><a href="#" data-nav-section="education" style="color: rgb(255, 255, 255);">Education</a></li>
+						<li><a href="#" data-nav-section="experience" style="color: rgb(255, 255, 255);">Experience</a></li>
+						<li><a href="#" data-nav-section="work" style="color: rgb(255, 255, 255);">Work</a></li>
+						<li><a href="#" data-nav-section="blog" style="color: rgb(255, 255, 255);">Blog</a></li>
+						<li><a href="#" data-nav-section="contact" style="color: rgb(255, 255, 255);">Contact</a></li>
+					</ul>
+				</div>
+			</nav>
+<!-- 
+			<div class="colorlib-footer">
+								<ul>
+					<li><a href="#"><i class="icon-facebook2"></i></a></li>
+					<li><a href="#"><i class="icon-twitter2"></i></a></li>
+					<li><a href="#"><i class="icon-instagram"></i></a></li>
+					<li><a href="#"><i class="icon-linkedin2"></i></a></li>
+				</ul>
+			</div> -->
+
+		</aside>
+
+		<div id="colorlib-main">
+			<section id="colorlib-hero" class="js-fullheight" data-section="home">
+				<div class="flexslider js-fullheight">
+					<ul class="slides">
+						<li style="background-image: url(images/Untitled-10.jpg);">
+
+				   		<div class="overlay"></div>
+				   		<div class="container-fluid">
+				   			<div class="row">
+					   			<div class="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
+					   				<div class="slider-text-inner js-fullheight">
+					   					<div class="desc">
+						   					<h2 style="font-weight: bolder;">Hi! I am </h2><h1>Lakshmi Narasimha</h1>
+						   					<h2>Welcome to my Portfolio
+
+
+												<a href="#" target="_blank"></a></h2>
+												<p><a href="https://drive.google.com/file/d/1Mt6staNHdScySb46CL8ubvn8iF25diGw/view?usp=sharing" class="btn btn-primary btn-learn">Download CV <i class="icon-download4"></i></a></p>
+											</div>
+					   				</div>
+					   			</div>
+					   		</div>
+				   		</div>
+				   	</li>
+				   	<li style="background-image: url(images/Untitled-12.jpg);">
+						<div class="overlay"></div>
+				   		<div class="container-fluid">
+				   			<div class="row">
+					   			<div class="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
+					   				<div class="slider-text-inner">
+					   					<div class="desc">
+						   					<h1>I am <br>a Developer</h1>
+												<h2>												Thank You for Visiting
+													 <a href="#about1" target="_blank">lakshmip.app</a></h2>
+												<p><a href="#about1" class="btn btn-primary btn-learn">View Portfolio <i class="icon-briefcase3"></i></a></p>
+											</div>
+					   				</div>
+					   			</div>
+					   		</div>
+				   		</div>
+				   	</li>
+				  	</ul>
+			  	</div>
+			</section>
+
+			<section class="colorlib-about" data-section="about" id="about1">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
+								<div class="col-md-12">
+									<div class="about-desc">
+										<span class="heading-meta">About </span>
+										<h2 class="colorlib-heading">Who Am I?</h2>
+										<p><strong>Hi I'm Lakshmi Narasimha Telugu</strong>
+											Welcome to my corner of the internet! Are you seeking a dedicated and passionate individual to join your team? Look no further! I'm ready to bring my skills and enthusiasm to your organization.
+
+
+											<p>
+											 I'm thrilled that you've taken the time to explore my work and learn more about what I have to offer.
+										Whether you stumbled upon my site by chance or were referred here, I'm grateful for your interest.</p>
+
+Feel free to take a look around and explore the projects I've worked on. Each piece represents not only my skills and abilities but also my passion for Software Field/IT Industry.
+
+If you have any questions or would like to discuss potential collaborations, don't hesitate to reach out. I'm always eager to connect with fellow enthusiasts, clients, and potential employers.
+											
+											
+											
+											
+											</p>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-3 animate-box" data-animate-effect="fadeInLeft">
+									<div class="services color-1">
+										<span class="icon2"><i class="icon-bulb"></i></span>
+										<h3>Programming </h3>
+									</div>
+								</div>
+								<div class="col-md-3 animate-box" data-animate-effect="fadeInRight">
+									<div class="services color-2">
+										<span class="icon2"><i class="icon-globe-outline"></i></span>
+										<h3>Web Design</h3>
+									</div>
+								</div>
+								<div class="col-md-3 animate-box" data-animate-effect="fadeInTop">
+									<div class="services color-3">
+										<span class="icon2"><i class="icon-data"></i></span>
+										<h3>Software</h3>
+									</div>
+								</div>
+								<div class="col-md-3 animate-box" data-animate-effect="fadeInBottom">
+									<div class="services color-4">
+										<span class="icon2"><i class="icon-phone3"></i></span>
+										<h3>Application</h3>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+									<div class="hire">
+										<h2>I am happy to know you <br>that 10+ projects and internships done sucessfully!</h2>
+										<a href="#contact1" class="btn-hire">Hire me</a>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+			
+			<section class="colorlib-services" data-section="services">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta">What I do?</span>
+							<h2 class="colorlib-heading">Here are some of my expertise</h2>
+						</div>
+					</div>
+					<div class="row row-pt-md">
+						<div class="col-md-4 text-center animate-box">
+							<div class="services color-1">
+								<span class="icon">
+									<i class="icon-bulb"></i>
+								</span>
+								<div class="desc">
+									<h3>Web Development</h3>
+									<p>Specialize in creating dynamic web solutions & leveraging the technologies.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 text-center animate-box">
+							<div class="services color-2">
+								<span class="icon">
+									<i class="icon-data"></i>
+								</span>
+								<div class="desc">
+									<h3>Database  </h3>
+									<p>Good understanding of database management systems</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 text-center animate-box">
+							<div class="services color-3">
+								<span class="icon">
+									<i class="icon-phone3"></i>
+								</span>
+								<div class="desc">
+									<h3>Software</h3>
+									<p>Aspiring software developer with good knowledge in programming skills</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 text-center animate-box">
+							<div class="services color-4">
+								<span class="icon">
+									<i class="icon-layers2"></i>
+								</span>
+								<div class="desc">
+									<h3>Programming</h3>
+									<p>Skilled in programming Languages such as Python, Php, Java</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 text-center animate-box">
+							<div class="services color-5">
+								<span class="icon">
+									<i class="icon-data"></i>
+								</span>
+								<div class="desc">
+									<h3>SDLC</h3>
+									<p>Understanding software development Life Cycle processes</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 text-center animate-box">
+							<div class="services color-6">
+								<span class="icon">
+									<i class="icon-phone3"></i>
+								</span>
+								<div class="desc">
+									<h3>Android Apps</h3>
+									<p>Developing Android applications with using Kotlin and java</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<div id="colorlib-counter" class="colorlib-counters" style="background-image: url(images/cover_bg_1.jpg);" data-stellar-background-ratio="0.5">
+				<div class="overlay"></div>
+				<div class="colorlib-narrow-content">
+					<div class="row">
+					</div>
+					<div class="row">
+						<div class="col-md-3 text-center animate-box">
+							<span class="colorlib-counter js-counter" data-from="0" data-to="20" data-speed="5000" data-refresh-interval="50"></span>
+							<span class="colorlib-counter-label">Repositories in Git</span>
+						</div>
+						<div class="col-md-3 text-center animate-box">
+							<span class="colorlib-counter js-counter" data-from="0" data-to="12" data-speed="5000" data-refresh-interval="50"></span>
+							<span class="colorlib-counter-label">Projects</span>
+						</div>
+						<div class="col-md-3 text-center animate-box">
+							<span class="colorlib-counter js-counter" data-from="0" data-to="4" data-speed="5000" data-refresh-interval="50"></span>
+							<span class="colorlib-counter-label">Inernships</span>
+						</div>
+						<div class="col-md-3 text-center animate-box">
+							<span class="colorlib-counter js-counter" data-from="0" data-to="10" data-speed="5000" data-refresh-interval="50"></span>
+							<span class="colorlib-counter-label">Web & Android Apps</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<section class="colorlib-skills" data-section="skills">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta">My Specialty</span>
+							<h2 class="colorlib-heading animate-box">My Skills</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+							<p>As a recent MCA graduate, I embark on my journey into the digital realm with a thirst for knowledge and a passion for innovation. Like a fledgling explorer, I embrace the challenges ahead, ready to carve my path in the ever-evolving landscape of technology.
+
+							</p>
+						</div>
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+							<div class="progress-wrap">
+								<h3>Photoshop & MS Office</h3>
+								<div class="progress">
+								 	<div class="progress-bar color-1" role="progressbar" aria-valuenow="75"
+								  	aria-valuemin="0" aria-valuemax="100" style="width:85%">
+								    <span>85%</span>
+								  	</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
+							<div class="progress-wrap">
+								<h3>Javascript & React</h3>
+								<div class="progress">
+								 	<div class="progress-bar color-2" role="progressbar" aria-valuenow="60"
+								  	aria-valuemin="0" aria-valuemax="100" style="width:60%">
+								    <span>60%</span>
+								  	</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+							<div class="progress-wrap">
+								<h3>HTML5 & CSS3</h3>
+								<div class="progress">
+								 	<div class="progress-bar color-3" role="progressbar" aria-valuenow="85"
+								  	aria-valuemin="0" aria-valuemax="100" style="width:90%">
+								    <span>90%</span>
+								  	</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
+							<div class="progress-wrap">
+								<h3>Python & Php</h3>
+								<div class="progress">
+								 	<div class="progress-bar color-4" role="progressbar" aria-valuenow="90"
+								  	aria-valuemin="0" aria-valuemax="100" style="width:80%">
+								    <span>80%</span>
+								  	</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+							<div class="progress-wrap">
+								<h3>WordPress, Mysql & Mangodb</h3>
+								<div class="progress">
+								 	<div class="progress-bar color-5" role="progressbar" aria-valuenow="70"
+								  	aria-valuemin="0" aria-valuemax="100" style="width:70%">
+								    <span>70%</span>
+								  	</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
+							<div class="progress-wrap">
+								<h3>Java & Kotlin</h3>
+								<div class="progress">
+								 	<div class="progress-bar color-6" role="progressbar" aria-valuenow="80"
+								  	aria-valuemin="0" aria-valuemax="100" style="width:55%">
+								    <span>55%</span>
+								  	</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="colorlib-education" data-section="education">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta">Education</span>
+							<h2 class="colorlib-heading animate-box">Education</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+							<div class="fancy-collapse-panel">
+								<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+									<div class="panel panel-default">
+									    <div class="panel-heading" role="tab" id="headingOne">
+									        <h4 class="panel-title">
+									            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Master Degree Computer Applications								            </a>
+									        </h4>
+									    </div>
+									    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+									         <div class="panel-body">
+									            <div class="row">
+										      		<div class="col-md-6">
+										      			<p>During my Master of Computer Applications program at Sri Venkateswara College of Engineering and Technology, Chittoor, <strong>2021 - 2023</strong>. Achieving an overall grade of <strong>86%</strong>. </p>
+										      		</div>
+										      		<div class="col-md-6">
+										      			<p> I immersed myself in a rigorous curriculum aimed at honing my skills in software development, database management, and system analysis. </p>
+										      		</div>
+										      	</div>
+									         </div>
+									    </div>
+									</div>
+									<div class="panel panel-default">
+									    <div class="panel-heading" role="tab" id="headingTwo">
+									        <h4 class="panel-title">
+									            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Bachelor Degree of Computer Science
+									            </a>
+									        </h4>
+									    </div>
+									    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+									        <div class="panel-body">
+									            <p>Achieved with a commendable 78% grade, my Bachelor's Degree in Computer Science from Kurnool Degree College, Kurnool, <strong>2018 - 2021</strong>.  Provided me with a comprehensive understanding of fundamental computer science principles and methodologies.</p>
+													<ul>
+														<li>Engaged in internships or industry projects, applying theoretical knowledge to real-world scenarios and garnering practical experience.
+														</li>
+														<li>Participated in workshops or training sessions, acquiring additional skills and staying updated with the latest industry trends and technologies.
+
+
+
+														</li>
+													</ul>
+									        </div>
+									    </div>
+									</div>
+									<div class="panel panel-default">
+									    <div class="panel-heading" role="tab" id="headingThree">
+									        <h4 class="panel-title">
+									            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Intermediate Maths
+									            </a>
+									        </h4>
+									    </div>
+									    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+									        <div class="panel-body">
+									            <p>Govt Junior College <strong>MPC</strong>, kurnool, 2016 - 2018. <strong>Score: 910/1000</strong>.</p>
+									        </div>
+									    </div>
+									</div>
+
+								
+
+									<div class="panel panel-default">
+									    <div class="panel-heading" role="tab" id="headingFive">
+									        <h4 class="panel-title">
+									            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">High School Secondary Education
+									            </a>
+									        </h4>
+									    </div>
+									    <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+									        <div class="panel-body">
+									            <p>Govt Town Model High School, Kurnool, <strong>2016</strong>.</p>	
+									        </div>
+									    </div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="colorlib-experience" data-section="experience">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta">Experience</span>
+							<h2 class="colorlib-heading animate-box">Work Experience</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+				         <div class="timeline-centered">
+					         <article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
+					            <div class="timeline-entry-inner">
+
+					               <div class="timeline-icon color-1">
+					                  <i class="icon-pen2"></i>
+					               </div>
+
+					               <div class="timeline-label">
+					                  <h2><a href="#">React Bootcamp</a> <span> 15 Days</span></h2>
+					                  <p>During my React bootcamp a Devtown, I immersed myself in an intensive learning environment focused on mastering React.js and its ecosystem. Through hands-on projects and mentorship, I gained practical experience in building dynamic and responsive web applications. </p>
+					               </div>
+					            </div>
+					         </article>
+
+
+					         <article class="timeline-entry animate-box" data-animate-effect="fadeInRight">
+					            <div class="timeline-entry-inner">
+					               <div class="timeline-icon color-2">
+					                  <i class="icon-pen2"></i>
+					               </div>
+					               <div class="timeline-label">
+					               	<h2><a href="#">Fundamental of Python and Analytics with Machine Learning & Business
+									</a> <span>December 2022 - February 2023</span></h2>
+					                  <p>During my internship at Ybi foundation, I delved into the core principles of Python programming and its applications in data analytics, machine learning, and business intelligence. Through hands-on projects and mentorship, I gained valuable insights into leveraging Python for data-driven decision-making and enhancing business performance.</p>
+					               </div>
+					            </div>
+					         </article>
+
+					         <article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
+					            <div class="timeline-entry-inner">
+					               <div class="timeline-icon color-3">
+					                  <i class="icon-pen2"></i>
+					               </div>
+					               <div class="timeline-label">
+					               	<h2><a href="#">Android Basics in Kotlin
+
+									</a> <span>August 2022 - October 2022</span></h2>
+					                  <p>Throughout my participation in the Google-supported virtual internship with collaboration from AICTE and Google Developers, I engaged in immersive learning experiences. By actively collaborating with industry experts and peers, I expanded my knowledge and skills in cutting-edge technologies, setting a strong foundation for my career growth.</p>
+					               </div>
+					            </div>
+					         </article>
+
+					         <article class="timeline-entry animate-box" data-animate-effect="fadeInTop">
+					            <div class="timeline-entry-inner">
+					               <div class="timeline-icon color-4">
+					                  <i class="icon-pen2"></i>
+					               </div>
+					               <div class="timeline-label">
+					               	<h2><a href="#">Python Full Stack Web Developer</a> <span>July 2022 - September 2022</span></h2>
+					                  <p>During my Python Full Stack Web Developer internship at Panech Solutions Chennai, I immersed myself in comprehensive training, gaining hands-on experience in both front-end and back-end development. Through collaborative projects and mentorship, I honed my skills in building dynamic and scalable web applications, setting a solid foundation for my career in web development.</p>
+					               </div>
+					            </div>
+					         </article>
+
+					         <article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
+					            <div class="timeline-entry-inner">
+					               <div class="timeline-icon color-5">
+					                  <i class="icon-pen2"></i>
+					               </div>
+					               <div class="timeline-label">
+					               	<h2><a href="#">Campus Ambasidor at Devtown & Appreciation at KDC
+
+									   </a> <span> 1 month</span></h2>
+					                  <p>Serving as Campus Ambassador at Devtown and at KDC showcases my dedication to fostering community engagement and academic excellence simultaneously.</p>
+					               </div>
+					            </div>
+					         </article>
+
+					         <article class="timeline-entry begin animate-box" data-animate-effect="fadeInBottom">
+					            <div class="timeline-entry-inner">
+					               <div class="timeline-icon color-none">
+					               </div>
+					            </div>
+					         </article>
+					      </div>
+					   </div>
+				   </div>
+				</div>
+			</section>
+
+			<section class="colorlib-work" data-section="work">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta">My Work</span>
+							<h2 class="colorlib-heading animate-box">Recent Work</h2>
+						</div>
+					</div>
+					<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
+						<div class="col-md-12">
+							<p class="work-menu"><span><a href="#" class="active"></a></span> <span><a href="#">Web Design</a></span> <span><a href="#"></a></span> <span><a href="#"></a></span></p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+							<div class="project" style="background-image: url(images/ankur1.jpg);">
+								<div class="desc">
+									<div class="con">
+										<h3><a href="work.html">Work 01</a></h3>
+										<span>Website</span>
+										<p class="icon">
+											<span><a href="#"><i class="icon-share3"></i></a></span>
+											<span><a href="#"><i class="icon-eye"></i> 100</a></span>
+											<span><a href="#"><i class="icon-heart"></i> 49</a></span>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
+							<div class="project" style="background-image: url(images/screencapture-lakshmina-netlify-app-2024-02-15-17_36_55.png);">
+								<div class="desc">
+									<div class="con">
+										<h3><a href="work.html">Work 02</a></h3>
+										<span>Animation</span>
+										<p class="icon">
+											<span><a href="#"><i class="icon-share3"></i></a></span>
+											<span><a href="#"><i class="icon-eye"></i> 100</a></span>
+											<span><a href="#"><i class="icon-heart"></i> 49</a></span>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInTop">
+							<div class="project" style="background-image: url(images/traversal1.jpg);">
+								<div class="desc">
+									<div class="con">
+										<h3><a href="work.html">Work 03</a></h3>
+										<span>Illustration</span>
+										<p class="icon">
+											<span><a href="#"><i class="icon-share3"></i></a></span>
+											<span><a href="#"><i class="icon-eye"></i> 100</a></span>
+											<span><a href="#"><i class="icon-heart"></i> 49</a></span>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInBottom">
+							<div class="project" style="background-image: url(images/screencapture-lohithab-netlify-app-book-2024-02-15-17_44_46.png);">
+								<div class="desc">
+									<div class="con">
+										<h3><a href="work.html">Work 04</a></h3>
+										<span>Application</span>
+										<p class="icon">
+											<span><a href="#"><i class="icon-share3"></i></a></span>
+											<span><a href="#"><i class="icon-eye"></i> 100</a></span>
+											<span><a href="#"><i class="icon-heart"></i> 49</a></span>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+							<div class="project" style="background-image: url(images/screencapture-lakshmin-netlify-app-2024-02-15-17_46_43.png);">
+								<div class="desc">
+									<div class="con">
+										<h3><a href="work.html">Work 05</a></h3>
+										<span>Graphic, Logo</span>
+										<p class="icon">
+											<span><a href="#"><i class="icon-share3"></i></a></span>
+											<span><a href="#"><i class="icon-eye"></i> 100</a></span>
+											<span><a href="#"><i class="icon-heart"></i> 49</a></span>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
+							<div class="project" style="background-image: url(images/screencapture-lakshmip-netlify-app-2024-02-15-17_49_41.png);">
+								<div class="desc">
+									<div class="con">
+										<h3><a href="work.html">Work 06</a></h3>
+										<span>Web Design</span>
+										<p class="icon">
+											<span><a href="#"><i class="icon-share3"></i></a></span>
+											<span><a href="#"><i class="icon-eye"></i> 100</a></span>
+											<span><a href="#"><i class="icon-heart"></i> 49</a></span>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 animate-box">
+							<p><a href="https://lakshmina.netlify.app" class="btn btn-primary btn-lg btn-load-more">Load more <i class="icon-reload"></i></a></p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+					<span class="heading-meta">Complition Of</span>
+					<h2 class="colorlib-heading animate-box">Certifications</h2>
+				</div>
+			</div>
+
+			<h2></h2>
+			<p></p>
+			
+			<div class="slideshow-container">
+
+
+
+				<div class="mySlides fade">
+					<div class="numbertext">1 / 3</div>
+					<img src="images/New folder/apssdc_certificate.jpg" style="width:100%">
+					<div class="text">1</div>
+				  </div>
+
+
+				<div class="mySlides fade">
+					<div class="numbertext">1 / 3</div>
+					<img src="images/New folder/iihfull stack cert.jpg" style="width:100%">
+					<div class="text">1</div>
+				  </div>
+
+			
+			<div class="mySlides fade">
+			  <div class="numbertext">2 / 3</div>
+			  <img src="images/androidt_certificate.jpg" style="width:100%">
+			  <div class="text">2</div>
+			</div>
+			
+			<div class="mySlides fade">
+			  <div class="numbertext">3 / 3</div>
+			  <img src="images/react bootcamp1.jpg" style="width:100%">
+			  <div class="text">3</div>
+			</div>
+			
+
+
+
+
+
+
+			<div class="mySlides fade">
+				<div class="numbertext">4 / 6</div>
+				<img src="images/python microsoft exam1.jpg" style="width:100%">
+				<div class="text">4</div>
+			  </div>
+			  <div class="mySlides fade">
+				<div class="numbertext">5 / 6</div>
+				<img src="images/crash course on python1.jpg" style="width:100%">
+				<div class="text">5</div>
+			  </div>
+
+			  <div class="mySlides fade">
+				<div class="numbertext">6 / 6</div>
+				<img src="images/golang1.jpg" style="width:100%">
+				<div class="text">6</div>
+			  </div>
+
+			  
+			  <div class="mySlides fade">
+				<div class="numbertext">7 / 8</div>
+				<img src="images/python wih flask and ai1.jpg" style="width:100%">
+				<div class="text">7</div>
+			  </div>
+
+			  
+			  <div class="mySlides fade">
+				<div class="numbertext">8 / 8</div>
+				<img src="images/devtown appreciation1.jpg" style="width:100%">
+				<div class="text">8</div>
+			  </div>
+
+
+
+
+
+
+
+
+
+			</div>
+			<br>
+			
+			<div class="dots" style="text-align:center">
+			  <span class="dot"></span> 
+			  <span class="dot"></span> 
+			  <span class="dot"></span> 
+			  <span class="dot"></span>
+			  <span class="dot"></span>
+			  <span class="dot"></span>
+			  <span class="dot"></span>
+			  <span class="dot"></span>
+			  <span class="dot"></span>
+
+			</div>
+			
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+			<section class="colorlib-blog" data-section="blog">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta">Read</span>
+							<h2 class="colorlib-heading">Recent Blog</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
+							<div class="blog-entry">
+								<a href="blog.html" class="blog-img"><img src="images/screencapture-developers-google-profile-badges-events-io-2023-attendee-2024-02-16-10_48_53.png" class="img-responsive" alt="HTML5 Bootstrap Template by colorlib.com"></a>
+								<div class="desc">
+									<span><small>April 14, 2018 </small> | <small> Web Design </small> | <small> <i class="icon-bubble3"></i> 4</small></span>
+									<h3><a href="blog.html">Renovating National Gallery</a></h3>
+									<p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInRight">
+							<div class="blog-entry">
+								<a href="blog.html" class="blog-img"><img src="images/google_developers1.jpg" class="img-responsive" alt="HTML5 Bootstrap Template by colorlib.com"></a>
+								<!-- <div class="desc">
+									<span><small>April 14, 2018 </small> | <small> Web Design </small> | <small> <i class="icon-bubble3"></i> 4</small></span>
+									<h3><a href="blog.html">Wordpress for a Beginner</a></h3>
+									<p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+								</div> -->
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
+							<div class="blog-entry">
+								<a href="blog.html" class="blog-img"><img src="images/react1.jpg" class="img-responsive" alt="HTML5 Bootstrap Template by colorlib.com"></a>
+								<div class="desc">
+									<span><small>April 14, 2018 </small> | <small> Inspiration </small> | <small> <i class="icon-bubble3"></i> 4</small></span>
+									<h3><a href="blog.html">Make website from scratch</a></h3>
+									<p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+
+					<div class="row">
+						<div class="col-md-12 animate-box">
+							<p><a href="https://developers.google.com/profile/u/lakshmi-narasimha" class="btn btn-primary btn-lg btn-load-more">Load more <i class="icon-reload"></i></a></p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+
+
+
+
+
+
+
+
+
+
+		<section>
+
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+						<span class="heading-meta">photos</span>
+						<h2 class="colorlib-heading">PHOTOS</h2>
+					</div>
+				</div>
+
+			  <div id="card-container"></div>
+			  <div class="card-actions">
+				<button id="load-more">Load more</button>
+				<span>Showing 
+				  <span id="card-count"></span> of 
+				  <span id="card-total"></span> cards      
+				</span>
+			  </div>
+			
+			</section>
+			
+			
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+
+
+<!-- 
+
+
+
+			<!DOCTYPE html>
+			<html lang="en">
+			<head>
+			  <meta charset="UTF-8">
+			  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+			  <title>Portfolio Website</title>
+			  <style>
+				.container {
+				  display: flex;
+				  flex-wrap: wrap;
+				  justify-content: space-around;
+				  margin: 20px;
+				  margin-left: -100px;
+				}
+			
+				.image {
+				  width: 300px;
+				  height: 200px;
+				  margin: 10px;
+				  border: 1px solid #ddd;
+				  overflow: hidden;
+				  animation: animate 2s linear infinite;
+				}
+			
+				@keyframes animate {
+				  0% {
+					transform: scale(1.0);
+				  }
+				  50% {
+					transform: scale(1.1);
+				  }
+				  100% {
+					transform: scale(1.0);
+				  }
+				}
+			  </style>
+			</head>
+			<body>
+			  <div class="container">
+				<img class="image" src="images/New folder/swecha.jpg" alt="Image 1">
+				<img class="image" src="images/New folder/android campus1.jpg" alt="Image 4">
+
+				<img class="image" src="images/New folder/android campus frds.jpg" alt="Image 2">
+				<img class="image" src="images//New folder/android campus group frds.jpg" alt="Image 3">
+				<img class="image" src="images/New folder/swecha.jpg"Image 5>
+			  </div>
+			</body>
+			</html>
+			 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+
+
+			
+
+			<div class="video-container">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/anY0QaheIVc?si=OYXD6kqOruCsX538" frameborder="0" allowfullscreen></iframe>
+			  </div>
+			  
+
+
+			
+<section id="contact1">
+
+			<section class="colorlib-contact" data-section="contact">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta">Get in Touch</span>
+							<h2 class="colorlib-heading">Contact</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-5">
+							<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
+								<div class="colorlib-icon">
+									<i class="icon-globe-outline"></i>
+								</div>
+								<div class="colorlib-text">
+									<p><a href="#">tlnarasimha3@gmail.com</a></p>
+								</div>
+							</div>
+
+							<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
+								<div class="colorlib-icon">
+									<i class="icon-map"></i>
+								</div>
+								<div class="colorlib-text">
+									<p>S.R Nagar, Hyderabad</p>
+								</div>
+							</div>
+
+							<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
+								<div class="colorlib-icon">
+									<i class="icon-phone"></i>
+								</div>
+								<div class="colorlib-text">
+									<p><a href="tel://">+91 9381269439</a></p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-7 col-md-push-1">
+							<div class="row">
+								<div class="col-md-10 col-md-offset-1 col-md-pull-1 animate-box" data-animate-effect="fadeInRight">
+									<form action="">
+										<div class="form-group">
+											<input type="text" class="form-control" placeholder="Name">
+										</div>
+										<div class="form-group">
+											<input type="text" class="form-control" placeholder="Email">
+										</div>
+										<div class="form-group">
+											<input type="text" class="form-control" placeholder="Subject">
+										</div>
+										<div class="form-group">
+											<textarea name="" id="message" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+										</div>
+
+									</form>
+
+
+									<div class="form-group">
+										<a href="https://wa.me/919381269439?text=Hi!"><input type="submit" class="btn btn-primary btn-send-message" value="Send Message"></a>
+										<a href="https://wa.me/919381269439?text=Hi!" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+									</div>
+
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</section>
+
+		</div><!-- end:colorlib-main -->
+	</div><!-- end:container-wrap -->
+	</div><!-- end:colorlib-page -->
+
+
+
+
+
+
+
+
+
+	
+
+
+	<script>
+		let slideIndex = 0;
+		showSlides();
+		
+		function showSlides() {
+		  let i;
+		  let slides = document.getElementsByClassName("mySlides");
+		  let dots = document.getElementsByClassName("dot");
+		  for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";  
+		  }
+		  slideIndex++;
+		  if (slideIndex > slides.length) {slideIndex = 1}    
+		  for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block";  
+		  dots[slideIndex-1].className += " active";
+		  setTimeout(showSlides, 5000); // Change image every 2 seconds
+		}
+
+
+
+
+
+
+
+
+
+
+
+		const cardContainer = document.getElementById("card-container");
+				const loadMoreButton = document.getElementById("load-more");
+				const cardCountElem = document.getElementById("card-count");
+				const cardTotalElem = document.getElementById("card-total");
+			
+				const cardLimit = 12; // Total number of cards
+				const cardIncrease = 3; // Number of cards to load at a time
+				const pageCount = Math.ceil(cardLimit / cardIncrease);
+				let currentPage = 1;
+			
+				cardTotalElem.innerHTML = cardLimit;
+			
+				const imageUrls = [
+
+				  "images/New folder/android campus1.jpg",
+				  "images/New folder/swecha.jpg",
+				  "images/New folder/iithpic1.jpg",
+
+				  "images/New folder/hdgolanggroup.jpg",
+				  "images/New folder/googledeveloerspic.jpg",
+				  "images/New folder/android campus group frds.jpg",
+				  "images/New folder/android campus frds.jpg",
+				  "images/New folder/android campus show1.jpg",
+				  "images/New folder/iithpic3.jpg",
+				  "images/New folder/microsoftpic.jpg",
+				  "images/New folder/ranjithsirpic.jpg",
+				  "images/New folder/WhatsApp Image 2024-02-17 at 10.30.06_bffbf3f6.jpg"
+				];
+			
+				const handleButtonStatus = () => {
+				  if (pageCount === currentPage) {
+					loadMoreButton.classList.add("disabled");
+					loadMoreButton.setAttribute("disabled", true);
+				  }
+				};
+			
+				const createCard = (index) => {
+				  const card = document.createElement("div");
+				  card.className = "card";
+				  const image = document.createElement("img");
+				  image.src = imageUrls[index - 1]; // Adjust index for array
+				  card.appendChild(image);
+				  cardContainer.appendChild(card);
+				};
+			
+				const addCards = (pageIndex) => {
+				  currentPage = pageIndex;
+			
+				  handleButtonStatus();
+			
+				  const startRange = (pageIndex - 1) * cardIncrease;
+				  const endRange =
+					pageIndex * cardIncrease > cardLimit ? cardLimit : pageIndex * cardIncrease;
+			
+				  cardCountElem.innerHTML = endRange;
+			
+				  for (let i = startRange + 1; i <= endRange; i++) {
+					createCard(i);
+				  }
+				};
+			
+				window.onload = function () {
+				  addCards(currentPage);
+				  loadMoreButton.addEventListener("click", () => {
+					addCards(currentPage + 1);
+				  });
+				};
+		</script>
+		
+		
+		
+
+
+
+
+
+
+
+
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Flexslider -->
+	<script src="js/jquery.flexslider-min.js"></script>
+	<!-- Owl carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- Counters -->
+	<script src="js/jquery.countTo.js"></script>
+	
+	
+	<!-- MAIN JS -->
+	<script src="js/main.js"></script>
+
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
